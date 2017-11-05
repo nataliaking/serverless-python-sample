@@ -12,6 +12,3 @@ jobs:
             . venv/bin/activate
             pip install pytest
        - run: echo "hello world"
-       - run:
-          name: PyTest run
-          command: py.test
