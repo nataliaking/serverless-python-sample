@@ -2,13 +2,13 @@ version: 2
 jobs:
    build:
      docker:
-       - image: circleci/python:2.7
+       - image: circleci/python:3.5
      steps:
        - checkout
        - run:
           name: Install PyTest
           command: |
-            python -m venv venv
+            python3 -m venv venv
             . venv/bin/activate
             pip install pytest
        - run: echo "hello world"
