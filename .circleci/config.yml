@@ -14,4 +14,4 @@ jobs:
        - run: echo "hello world"
        - run:
           name: PyTest run
-          command: python py.test
+          command: py.test
