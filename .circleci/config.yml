@@ -5,10 +5,13 @@ jobs:
        - image: circleci/python:2.7
      steps:
        - checkout
-       - run: echo "hello world"
        - run:
           name: Install PyTest
-          command: pip install pytest
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install pytest
+       - run: echo "hello world"
        - run:
           name: PyTest run
           command: python py.test
