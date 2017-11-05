@@ -6,3 +6,9 @@ jobs:
      steps:
        - checkout
        - run: echo "hello world"
+       - run:
+          name: Install PyTest
+          command: pip install pytest
+       - run:
+          name: PyTest run
+          command: python py.test
